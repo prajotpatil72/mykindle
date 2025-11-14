@@ -1,0 +1,23 @@
+{
+  "name": "pdf-reader-llm-root",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "test": "node tests/phase1-2-test.js",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "husky": "^8.0.3",
+    "playwright": "^1.56.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.0"
+  }
+}
